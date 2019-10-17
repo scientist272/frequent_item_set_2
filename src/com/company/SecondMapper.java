@@ -7,7 +7,7 @@ import java.util.Set;
 import java.util.concurrent.*;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-
+//第二层mapper,用于统计第一层reducer输出的结果
 public class SecondMapper {
     private static final BlockingDeque<Map<Set<String>,Integer>> buffer = Transfer.bufferForSecondPass;
     private static final Map<Set<String>,Integer> itemSet = new ConcurrentHashMap<>();
